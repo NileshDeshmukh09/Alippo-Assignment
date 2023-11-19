@@ -41,14 +41,30 @@ const DeleteModal = (props) => {
       </Button>
       <Modal title={"DELETE USER " + props.data?.id} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{ className: "bg-red-600 hover:bg-green-600 " }}>
 
-        <div className='flex justify-evenly p-3 bg-slate-50'>
+        <div className='flex justify-evenly m-2 p-3 bg-slate-50'>
 
-          <p> <span className='font-bold' >Name : </span> {props.data?.name}</p>
-          <p> <span className='font-bold'>Age : </span> {props.data?.age}</p>
+          <div className='flex justify-around w-[40%]'>
+            <span className='font-bold' >Name : </span>
+            <p> {props.data?.name}</p>
+          </div>
+          <div className='flex justify-around w-[40%]'>
+            <span className='font-bold'>Age : </span>
+            <p> {props.data?.age}</p>
+          </div>
+
         </div>
-        <div className="flex justify-evenly p-3 bg-slate-50">
-          <p> <span className='font-bold' >Pincode : </span> {props.data?.pinCode}</p>
-          <p> <span className='font-bold' >City  : </span> {props.data?.city}</p>
+        <div className="flex justify-evenly m-2 p-3 bg-slate-50">
+
+          <div className='flex justify-around w-[40%]'>
+            <span className='font-bold'>Pincode : </span>
+            <p> {props.data?.pinCode}</p>
+          </div>
+
+          <div className='flex justify-around w-[40%]'>
+            <span className='font-bold'>City : </span>
+            <p> {props.data?.city}</p>
+          </div>
+
         </div>
       </Modal>
     </>
